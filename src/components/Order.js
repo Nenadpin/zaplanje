@@ -37,6 +37,7 @@ const Order = ({ setOrder, orderBody, setOrderBody, bagrem, livada, data }) => {
         "Zahvaljujemo se na Vasoj porudzbini. Bicete uskoro kontaktirani..."
       );
       setOrder(false);
+      setOrderBody("");
     }
   };
   return (
