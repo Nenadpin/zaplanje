@@ -1,13 +1,255 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+* {
+  box-sizing: border-box;
+}
+.App {
+  display: flex;
+  width: 100vw;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-image: url("./images/grass.jpeg");
+}
+.header {
+  position: fixed;
+  top: 0;
+  display: flex;
+  text-align: center;
+  justify-content: space-between;
+  height: 74px;
+  width: 100vw;
+  padding-top: 15px;
+  padding-right: 20px;
+  left: 0;
+  background-color: darkgreen;
+  color: bisque;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 40px;
+  z-index: 99;
+}
+.orderBtn {
+  cursor: pointer;
+}
+main {
+  width: 100vw;
+}
+#slider {
+  display: flex;
+  align-items: center;
+  margin-left: auto;
+  margin-right: auto;
+  background-size: cover;
+  width: 60vw;
+  height: 304px;
+  max-width: 600px;
+  background-image: url("./images/img1.jpg");
+  background-repeat: no-repeat;
+  margin-top: 90px;
+  border-radius: 15px;
+  border: 2px solid white;
+  box-shadow: 5px 5px rgb(3, 51, 3);
+  justify-content: center;
+}
+.sliderimg {
+  width: 100%;
+  height: 300px;
+  object-fit: fill;
+}
+.products,
+.queen,
+.about {
+  display: flex;
+  align-items: center;
+  width: 60vw;
+  max-width: 600px;
+  height: 15vh;
+  background-color: #e6e6e6;
+  margin-top: 15px;
+  border-radius: 7.5vh;
+}
+.order {
+  height: 425px;
+  width: 60vw;
+  max-width: 600px;
+  background-color: #e6e6e6;
+  margin-top: 5px;
+  border-radius: 15px;
+  font-family: Arial, Helvetica, sans-serif;
+}
+h2 {
+  text-align: center;
+  margin: 0.25rem;
+}
+.orderForm {
+  display: flex;
+  flex-direction: column;
+}
+label {
+  padding: 0.5rem;
+}
+.total {
+  display: flex;
+  align-items: center;
+  margin-bottom: 5px;
+}
+input[type="text"],
+input[type="e-mail"],
+input[type="number"],
+.orderForm textarea {
+  font-family: Arial, Helvetica, sans-serif;
+  width: 100%;
+  min-height: 38px;
+  font-size: 1rem;
+  padding: 0.25rem;
+  border-radius: 0.5rem;
+  margin-right: 0.5em;
+  outline: none;
+}
+input[type="password"] {
+  font-family: Arial, Helvetica, sans-serif;
+  width: 50%;
+  min-height: 38px;
+  font-size: 1rem;
+  padding: 0.25rem;
+  border-radius: 0.5rem;
+  margin-right: 0.5em;
+  outline: none;
+}
+.orderForm textarea {
+  height: 145px;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+.orderForm button {
+  margin-top: 1rem;
+  height: 48px;
+  min-width: 48px;
+  max-width: 600px;
+  border-radius: 10px;
+  padding: 0.5rem;
+  font-size: 1rem;
+  cursor: pointer;
+  width: 60vw;
+}
+.buttons {
+  display: flex;
+  flex-direction: row;
+}
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.btn {
+  height: 15vh;
+  width: 15vh;
+  border-radius: 50%;
+  border: 2px solid darkgreen;
+  box-shadow: 5px 5px;
+  margin-left: -5px;
+  margin-top: -5px;
+  cursor: pointer;
+  transition: transform 0.2s;
+}
+.btn:hover,
+.ok:hover {
+  transform: scale(1.2);
+}
+.ok {
+  border-radius: 50%;
+}
+.back {
+  color: red;
+  cursor: pointer;
+}
+.email {
+  color: blue;
+  cursor: pointer;
+}
+.menu {
+  font-size: 36px;
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  padding-left: 25px;
+  text-shadow: 2px 2px dimgray;
+}
+.productDetails {
+  display: flex;
+  align-items: center;
+  width: 60vw;
+  max-width: 600px;
+  height: 15vh;
+  background-color: #e6e6e6;
+  margin-top: 15px;
+  border-radius: 7.5vh;
+  font-size: 18px;
+  font-family: Arial, Helvetica, sans-serif;
+  height: 480px;
+}
+.honey {
+  display: flex;
+  flex-direction: column;
+  margin-left: 15px;
+  height: 100%;
+}
+.details {
+  padding-left: 25px;
+  padding-right: 5px;
+}
+
+.footer {
+  display: block;
+  margin-bottom: -10px;
+  height: 25vh;
+  width: 100vw;
+  background: rgb(0, 0, 0, 0.45);
+}
+.map {
+  position: absolute;
+  height: 25vh;
+  width: 100vw;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  background-color: transparent;
+}
+a {
+  text-decoration: none;
+  color: bisque;
+}
+iframe {
+  display: flex;
+  width: 60vw;
+  max-width: 600px;
+  position: relative;
+  border-radius: 15px;
+  top: 10px;
+  left: 5px;
+}
+@media only screen and (max-width: 768px) {
+  .header {
+    font-size: 24px;
+  }
+  .menu {
+    font-size: 24px;
+    text-shadow: 2px 2px dimgray;
+  }
+  .products,
+  .queen,
+  .about,
+  .productDetails,
+  .order {
+    width: 90vw;
+  }
+  .orderForm button {
+    width: 90vw;
+  }
+  .details {
+    font-size: 12px;
+  }
+  iframe,
+  #slider {
+    width: 90vw;
+  }
 }
